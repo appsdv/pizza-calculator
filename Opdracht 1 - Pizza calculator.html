@@ -1,0 +1,45 @@
+<html>
+    <body>
+        <script>
+           // Appie el Aouni
+           // sorry voor het telaat in leveren
+           // deze opdracht heb ik niet helemaal alleen gemaamt iemand had me hierbij geholpen
+
+
+            var SmallPizza      = prompt("Aantal kleine pizza's:");     //Hier wordt er gevraagt hoeveel kleine pizza's de klant wilt
+            var MediumPizza     = prompt("Aantal medium pizza's:");     //Hier wordt er gevraagt hoeveel middel pizza's de klant wilt
+            var LargePizza      = prompt("Aantal grote pizza's:");      //Hier wordt er gevraagt hoeveel grote pizza's de klant wilt
+
+            const SmallPizzaPrice     = 6                                   //Hoeveel de pizza's kosten
+            const MediumPizzaPrice    = 9                                   //Hoeveel de pizza's kosten
+            const LargePizzaPrice     = 12                                  //Hoeveel de pizza's kosten
+
+            TotalPrice = Number(SmallPizza) * Number(SmallPizzaPrice) + Number(MediumPizza) * Number(MediumPizzaPrice) + Number(LargePizza) *Number(LargePizzaPrice);   //Hier wordt de TotalPrice uitgerekend
+
+            if (TotalPrice > 50) {                                                                                                                         //Als de TotalPrice groter is dan 50
+                TotalPrice = TotalPrice - 10;                                                                                                             //Krijgt de klant €10,- korting
+                document.write("<h1>" + "U heeft €10,- korting ontvangen omdat u meer dan €50,- heeft uitgegeven." + "<br>" + "</h1>");                      //Hier wordt geschreven dat de klant €10 korting krijgt
+            }
+            else {                                                                                                                                          //Als de TotalPrice kleinder is dan 50
+                document.write("<h1>" + "U heeft geen €10,- korting ontvangen omdat u niet meer dan €50,- heeft uitgegeven." + "<br>" + "</h1>");            //Krijgt de klant geen €10,- korting
+            }
+            
+            if (TotalPrice < 30) {                                                                                                                         //Als de TotalPrice kleiner is dan 30
+                TotalPrice = TotalPrice + 5;                                                                                                              //Moet de klant 5 euro bezorg kosten betalen
+                document.write("<h1>" + "Omdat u minder dan €30,- aan pizza('s) heeft besteld, krijgt u geen gratis bezorging." + "<br>" + "</h1>")          //Hier wordt geschreven dat de klant 5 euro aan bezorgkosten moet betalen
+            }
+            else {                                                                                                                                          //Als de TotalPrice groter is dan 30
+                TotalPrice = TotalPrice + 0;                                                                                                              //Worden er geen bezorgkosten bij gerekend
+                document.write("<h1>" + "Omdat u meer dan €30,- aan pizza('s) heeft besteld, krijgt u gratis bezorging." + "<br>" + "</h1>")                 //Hier wordt geschreven dat de klant gratis bezorging krijgt
+            }
+
+
+            document.write("<h1>" + "Je hebt "  + SmallPizza +     " kleine pizza('s) besteld."    + "<br>" + "</h1>");                                    //Hier wordt geschreven hoeveel en welke pizza's de klant wilt
+            document.write("<h1>" + "Je hebt "  + MediumPizza +     " middel pizza('s) besteld."    + "<br>" + "</h1>");                                    //Hier wordt geschreven hoeveel en welke pizza's de klant wilt
+            document.write("<h1>" + "Je hebt "  + LargePizza +      " grote pizza('s) besteld."     + "<br>" + "</h1>");                                    //Hier wordt geschreven hoeveel en welke pizza's de klant wilt
+            
+            document.write("<h1>" + "Je moet in totaal: €" + TotalPrice + ",- betalen." + "</h1>");                                                         //Hier wordt geschreven hoeveel de klant totaal kwijt is
+
+        </script>
+    </body>
+</html>
